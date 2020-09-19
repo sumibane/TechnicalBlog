@@ -22,15 +22,20 @@ public class UserController {
     public String login(){
         return "users/login";
     }
-    //For Logging After page
+    //For Logging Redirection
     @RequestMapping(value = "users/login", method = RequestMethod.POST)
     public String loginUser(User user){
         return "redirect:/posts";
     }
-    //For Registration Redirection
+    //For Registration Landing page
     @RequestMapping("users/registration")
     public String registration(){
         return "users/Registration";
+    }
+    //For Registration Redirection
+    @RequestMapping(value = "users/registration", method = RequestMethod.POST)
+    public String registerUser(User user){
+        return "users/login";
     }
     //For Logout
     @RequestMapping(value = "users/logout", method = RequestMethod.POST)

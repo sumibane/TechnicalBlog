@@ -1,1 +1,17 @@
-New Registration
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://thymeleaf.org">
+    <head>
+     <title>Spring Application Registration</title>
+    </head>
+    <header th:replace = "layout :: logged-out"></header>
+    <H2>Pleaser register:</H2>
+    <form method="post" th:object = "${User}">
+        <label for="username">Username:</label>
+        <input type= "text" id="username" name="username"><br>
+        <label for="password">Password:</label>
+        <input type= "password" id="password" name="password"><br>
+        <label for="fullname">Full Name:</label>
+        <input type= "text" id="fullname" name="fullname"><br>
+        <input type= "submit" value="Register">
+    </form>
+</html>
