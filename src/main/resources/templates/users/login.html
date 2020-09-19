@@ -1,1 +1,15 @@
-New Login!
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://thymeleaf.org">
+    <head th:replace = "layout :: site-head">
+        <title>Spring Application Login</title>
+    </head>
+    <header th:replace = "layout :: logged-out"></header>
+    <H2>Please Login:</H2>
+    <form method= "post" th:object = "${User}">
+        <label for= "username">UserName:</label>
+        <input type= "text" id= "username">
+        <label for= "password">Password:</label>
+        <input type= "password" id= "password">
+        <input type= "submit" value= "Login">
+    </form>
+</html>
