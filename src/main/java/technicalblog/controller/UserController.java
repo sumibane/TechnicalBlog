@@ -43,7 +43,7 @@ public class UserController {
     //For Registration Redirection
     @RequestMapping(value = "users/registration", method = RequestMethod.POST)
     public String registerUser(User user){
-        return "users/login";
+        return "redirect:/users/login";
     }
     //For Logout
     @RequestMapping(value = "users/logout", method = RequestMethod.POST)
