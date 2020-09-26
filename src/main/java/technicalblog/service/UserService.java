@@ -6,7 +6,7 @@ import technicalblog.model.User;
 @Service
 public class UserService {
     public boolean login(User user){
-        if(user.getUsername().equals("Sumit"))
+        if(user.getUsername().equals("sumit"))
             return true;
         else
             return false;
