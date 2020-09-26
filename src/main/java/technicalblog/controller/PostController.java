@@ -18,9 +18,7 @@ public class PostController {
 
     @RequestMapping("posts")
     public String getUserPosts(Model model){
-
-        ArrayList<Post> posts = postService.getOnePost();
-
+        Post posts = postService.getOnePost();
         model.addAttribute("onePost", posts);
         return "posts";
     }

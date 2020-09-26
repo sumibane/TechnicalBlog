@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -19,7 +20,7 @@ public class HomeController {
     public String getAllPosts(Model model){
 
         //Dependency injection
-        ArrayList<Post> posts = postService.getAllPosts();
+        List<Post> posts = postService.getAllPosts();
 
         //Add the Collection in the Model Object
         model.addAttribute("posts", posts);
