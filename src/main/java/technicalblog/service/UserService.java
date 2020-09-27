@@ -10,11 +10,12 @@ public class UserService {
 
     @Autowired
     private UserRepository repository;
-    public boolean login(User user){
-        if(user.getUsername().equals("sumit"))
-            return true;
+    public User login(User user){
+        User loginUser = repository.checkUser(user.getUsername(), user.getPassword());
+        if(loginUser !=  null)
+            return loginUser;
         else
-            return false;
+            return null;
     }
 
     public void registerUser(User newUser){

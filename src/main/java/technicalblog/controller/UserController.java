@@ -32,7 +32,8 @@ public class UserController {
     //For Logging Redirection
     @RequestMapping(value = "users/login", method = RequestMethod.POST)
     public String loginUser(User user){
-        if(userService.login(user)) {
+        User loginUser = userService.login(user);
+        if(loginUser != null) {
             return "redirect:/posts";
         }
         else
