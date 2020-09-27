@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import technicalblog.model.Post;
 import technicalblog.service.PostService;
 
-import java.util.Date;
 import java.util.List;
 
 @Controller
