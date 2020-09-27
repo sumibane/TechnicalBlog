@@ -31,7 +31,7 @@ public class UserRepository {
             TypedQuery<User> query = em.createQuery("SELECT u FROM User u WHERE u.username = :username AND u.password = :password", User.class);
             query.setParameter("username", username);
             query.setParameter("password", password);
-
+            
             return query.getSingleResult();
         }
         catch (Exception e){
